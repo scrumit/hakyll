@@ -18,7 +18,7 @@ Hakyll.
 2.  Using [stack]:
 
         $ stack install hakyll
-        On a Mac, if you install stack with brew (brew install haskell-stack) you will get a warning that the hakyll-init is not in the PATH. It isn't. That's because stack is not installed into /usr/local/bin but into /Users/<name>/.local/bin. Remember that later on. 
+        On a Mac, if you install stack with brew (brew install haskell-stack) you will get a warning that the hakyll-init is not in the PATH. It isn't. That's because stack is not installed into /usr/local/bin but into $HOME/.local/bin. Remember that later on. 
 
 3.  There are also some Linux distro packages:
 
@@ -36,6 +36,12 @@ Building the example site
 Apart from the main Hakyll library, the package also provides you with an
 executable `hakyll-init` to create an example site.  This is an easy way to get
 started.
+
+If hakyll-init is not found, you should make sure $HOME/.cabal/bin is in your $PATH.
+
+(If you're on OS X you may not have a bin directory in $HOME/.cabal. In this case, check $HOME/Library/Haskell/bin and put it on your path if you find hakyll-init there. See here for more information on installation paths on OS X.)
+
+
 
 Using cabal
 ===========

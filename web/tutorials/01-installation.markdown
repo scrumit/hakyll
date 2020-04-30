@@ -18,6 +18,7 @@ Hakyll.
 2.  Using [stack]:
 
         $ stack install hakyll
+        On a Mac, if you install stack with brew (brew install haskell-stack) you will get a warning that the hakyll-init is not in the PATH. It isn't. That's because stack is not installed into /usr/local/bin but into /Users/<name>/.local/bin. Remember that later on. 
 
 3.  There are also some Linux distro packages:
 
@@ -63,6 +64,7 @@ Using stack
 Create the `my-site` directory with the project files inside:
 
     $ stack exec hakyll-init my-site
+    On a mac, you might have to use stack exec /Users/<name>/.local/bin/hakyll-init <my-site>
 
 Now, change into `my-site` directory and create a file `stack.yaml` here with
 the following content:
@@ -72,6 +74,8 @@ the following content:
       - .
     extra-deps:
       - hakyll-4.13.0.1  # Or a later version you installed
+
+There is a stack init command that will create the stack.yaml file for you...
 
 On NixOS you will probably have to add the following lines to this file:
 

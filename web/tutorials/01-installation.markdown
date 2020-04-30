@@ -75,7 +75,7 @@ the following content:
     extra-deps:
       - hakyll-4.13.0.1  # Or a later version you installed
 
-There is a stack init command that will create the stack.yaml file for you...
+There is a 'stack init' command that will create the stack.yaml file for you but you'll still have to edit it to make sure it references the working version of Hakyll. At the present moment this is hakyll-4.13.3.0
 
 On NixOS you will probably have to add the following lines to this file:
 
